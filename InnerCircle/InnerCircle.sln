@@ -35,6 +35,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9EA4577E-F893-4637-9828-5535AB216C88}.Debug|Android.ActiveCfg = Debug|Android
 		{9EA4577E-F893-4637-9828-5535AB216C88}.Debug|Android.Build.0 = Debug|Android
+		{9EA4577E-F893-4637-9828-5535AB216C88}.Debug|Android.Deploy.0 = Debug|Android
 		{9EA4577E-F893-4637-9828-5535AB216C88}.Debug|iOS.ActiveCfg = Debug|iOS
 		{9EA4577E-F893-4637-9828-5535AB216C88}.Debug|iOS.Build.0 = Debug|iOS
 		{9EA4577E-F893-4637-9828-5535AB216C88}.Debug|iOS.Deploy.0 = Debug|iOS
