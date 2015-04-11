@@ -7,7 +7,8 @@ var db_url = "mongodb://localhost:27017/researchMe",
 
 var projectSchema = new Schema({
     id: ObjectId,
-    title: {type: String, required: true},
+    userLat: { type: String, required: true },
+    userLong: { type: String, required: true },
     date: {type: Date, default: Date.now}
 })
 
