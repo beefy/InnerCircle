@@ -65,9 +65,12 @@ header {
 .minus_friend{
     display:inline-block;
     text-align:right;
+    vertical-align:text-bottom;
+    height: 30px;
 }
 
 .name {
     display:inline-block;
     margin-right:10%;
+    vertical-align:super;
 }
