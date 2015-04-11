@@ -13,26 +13,26 @@
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
         //ajax
-        $.ajax({
-            url: 'http://localhost:3000/projects',
-            data: {
-                format: 'json'
-            },
-            error: function (e) {
-                //$('#info').html('<p>An error has occurred</p>');
-                console.log("AN AJAX ERROR HAS OCCURED: " + e.statusText);
-            },
-            dataType: 'json',
-            success: function (data) {
-                //var $title = $('<h1>').text(data.talks[0].talk_title);
-                //var $description = $('<p>').text(data.talks[0].talk_description);
-                //$('#info')
-                //   .append($title)
-                //   .append($description);
-                console.log("Data Loaded: " + data.statusText);
-            },
-            type: 'GET'
-        });
+        //$.ajax({
+        //    url: 'http://localhost:3000/projects',
+        //    data: {
+        //        format: 'json'
+        //    },
+        //    error: function (e) {
+        //        //$('#info').html('<p>An error has occurred</p>');
+        //        console.log("AN AJAX ERROR HAS OCCURED: " + e.statusText);
+        //    },
+        //    dataType: 'json',
+        //    success: function (data) {
+        //        //var $title = $('<h1>').text(data.talks[0].talk_title);
+        //        //var $description = $('<p>').text(data.talks[0].talk_description);
+        //        //$('#info')
+        //        //   .append($title)
+        //        //   .append($description);
+        //        console.log("Data Loaded: " + data.statusText);
+        //    },
+        //    type: 'GET'
+        //});
     };
 
     function onPause() {

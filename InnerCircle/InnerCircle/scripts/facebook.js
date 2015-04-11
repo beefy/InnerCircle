@@ -54,7 +54,6 @@ window.fbAsyncInit = function () {
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
-
 };
 
 // Load the SDK asynchronously
@@ -69,10 +68,31 @@ window.fbAsyncInit = function () {
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
+
+    //fetching data for user
     FB.api('/me', function (response) {
         console.log('Successful login for: ' + response.name);
         //document.getElementById('status').innerHTML =
         //  'Thanks for logging in, ' + response.name + '!';
+    });
+
+    //fetching data for friend
+    FB.api('/me/friends', function (response) {
+        friendCount = response.summary.total_count;
+        friendData = response.data;
+        for (i = 0; i < friendCount; i++) {
+            console.log(friendData[i].name);
+        }
+    });
+
+    ////fetch individual friend
+    //FB.api('/FRIEND1_ID', function (response) {
+    //    //  Stuff here
+    //});
+}
+
+function FBLogOut() {
+    FB.logout(function (response) {
+        // user is now logged out
     });
 }

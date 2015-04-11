@@ -16,8 +16,21 @@ header {
 
 .menu {
     width: 15%;
-    margin-left:7.5%;
     margin-top:-75%;
+    vertical-align:middle;
+}
+
+#hamburger {
+    margin-left:7.5%;
+    width: 15%;
+  margin-top: -75%;
+  vertical-align: middle;
+}
+
+#logout {
+        width: 23.5%;
+        margin-left: 75%;
+        margin-top: -85%;
     vertical-align:middle;
 }
 

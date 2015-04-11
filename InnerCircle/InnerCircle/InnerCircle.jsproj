@@ -113,6 +113,7 @@
     <Content Include="css\hamburger.css" />
     <Content Include="images\back.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logout.png" />
     <Content Include="images\menu.png" />
     <Content Include="images\minus.png" />
     <Content Include="login.html" />
