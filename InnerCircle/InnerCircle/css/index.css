@@ -63,3 +63,13 @@ header {
     height: 100%;
     width: 100%;
 }
+
+.minus_friend{
+    display:inline-block;
+    text-align:right;
+}
+
+.name {
+    display:inline-block;
+    margin-right:10%;
+}
