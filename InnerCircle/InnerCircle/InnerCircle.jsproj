@@ -136,8 +136,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="index.html" />
+    <Content Include="scripts\facebook.js" />
     <Content Include="scripts\hamburger.js" />
     <Content Include="scripts\index.js" />
+    <Content Include="scripts\map.js" />
     <Content Include="scripts\platformOverrides.js" />
     <Content Include="css\index.css" />
     <Content Include="res\icons\android\icon-36-ldpi.png" />
