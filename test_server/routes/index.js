@@ -1,8 +1,8 @@
 var mongoose = require("mongoose");
-var projects = mongoose.model('project');
+var people = mongoose.model('name');
 
-exports.getProject = function (req, res) {
-    projects.findOne({ _id: req.params.id}, function(err, gotProjects) {
+exports.getPerson = function (req, res) {
+    people.findOne({ _id: req.params.id}, function(err, gotProjects) {
                 if (err) {
                     console.log(err)
                 } else {
@@ -11,8 +11,8 @@ exports.getProject = function (req, res) {
     });
 }
 
-exports.getProjects = function (req, res) {
-    projects.find({}, function (err, gotProjects) {
+exports.getPeople = function (req, res) {
+    people.find({}, function (err, gotProjects) {
         if (err) {
             console.log(err)
         } else {
@@ -21,12 +21,14 @@ exports.getProjects = function (req, res) {
     });
 };
 
-exports.postProjects = function (req, res) {
-    var project = new projects({
-        title: req.body.title
+exports.postPerson = function (req, res) {
+    var project = new people({
+        name: req.body.name,
+        lat: req.body.lat,
+        long: req.body.lat
     });
 
     project.save(function () {
-        res.send("Saved " + req.body.title)
+        res.send("Saved " + req.body.name)
     });
 };

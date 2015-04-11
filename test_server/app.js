@@ -25,9 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 
-app.get('/projects/:id', index.getProject);
-app.get('/projects', index.getProjects);
-app.post('/projects', index.postProjects);
+app.get('/person/:id', index.getPerson);
+app.get('/people', index.getPeople);
+app.post('/person', index.postPerson);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -59,7 +59,7 @@ app.use(function(err, req, res, next) {
 });
 
 http.createServer(app).listen(3000, function () {
-    console.log("Server running at port 3000");
+    console.log("Server running");
 });
 
 module.exports = app;
