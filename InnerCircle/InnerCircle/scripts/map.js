@@ -28,6 +28,45 @@ function showPosition(position) {
     var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
     var user = new google.maps.Marker({ position: latlon, map: map, title: "You are here" });
     var bob = new google.maps.Marker({ position: boblatlon, map: map, title: "Bob is here!" });
+
+
+    /*
+        MARKER FOR USER
+    */
+    var usermarker = new google.maps.Marker({
+        position: latlon,
+        map: map
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+        content: "Me"
+    });
+
+    infowindow.open(usermarker.get('map'), usermarker);
+
+    //re-open if closed window
+    google.maps.event.addListener(usermarker, 'click', function () {
+        infowindow.open(usermarker.get('map'), usermarker);
+    });
+
+    /*
+        MARKER FOR BOB
+    */
+    var bobmarker = new google.maps.Marker({
+        position: boblatlon,
+        map: map
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+        content: "Bob Testy"
+    });
+
+    infowindow.open(bobmarker.get('map'), bobmarker);
+
+    //re-open if closed window
+    google.maps.event.addListener(bobmarker, 'click', function () {
+        infowindow.open(bobmarker.get('map'), bobmarker);
+    });
 }
 
 function showError(error) {
