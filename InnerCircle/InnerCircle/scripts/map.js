@@ -105,7 +105,7 @@
 ////},
 
 L.mapbox.accessToken = 'pk.eyJ1IjoibnNjaHVsdHoxNCIsImEiOiJUdXJTc0EwIn0.GDGkKBAERoUmL9RXrmP5bQ';
-var map = L.mapbox.map('map', 'examples.map-i86nkdio')
+var map = L.mapbox.map('mapholder', 'examples.map-i86nkdio')
     .setView([38.91338, -77.03236], 16);
 
 L.mapbox.featureLayer({
@@ -130,4 +130,13 @@ L.mapbox.featureLayer({
         'marker-color': '#BE9A6B',
         'marker-symbol': 'cafe'
     }
+    
+
 }).addTo(map);
+
+L.mapbox.toggle(map.zoomControl, this);
+
+//map.getContainer().querySelector('#zoomer').onclick = function () {
+//    toggle(map.zoomControl, this);
+//    return false;
+//};

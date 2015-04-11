@@ -87,3 +87,7 @@ header {
     margin-right:10%;
     vertical-align:super;
 }
+
+.leaflet-left {
+    visibility:hidden;
+}
