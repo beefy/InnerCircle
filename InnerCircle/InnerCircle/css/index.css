@@ -1,4 +1,4 @@
-﻿body {
+﻿body, html {
     height:100%;
     width:100%;
     margin:0;
@@ -54,7 +54,12 @@ header {
     margin-top:25%;
     display:list-item;
 }
-#map{
-    margin-top:50%;
-    margin-left:50%   
+#map {
+    height: 100%;
+    width: 100%;
+}
+#mapholder{
+    
+    height: 100%;
+    width: 100%;
 }
