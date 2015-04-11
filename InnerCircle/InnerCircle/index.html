@@ -26,9 +26,9 @@
 
     <!--HEADER-->
     <header>
-        <img id="hamburger" src="images/menu.png" onclick="openMenu()" />
+        <img id="hamburger" src="images/menu.png" onclick="openMenu();" />
         <img class="logo" src="images/logo.png" />
-        <img id="logout" src="images/logout.png" onclick="FBLogOut()" />
+        <img id="logout" src="images/logout.png" onclick="FBLogOut();" />
     </header>
 
     <!--MENU-->
@@ -37,7 +37,7 @@
             <li><div class="name">John Doe</div> <img src="images/minus.png" class="minus_friend" /></li>
             <li><div class="name">Sally S</div><img src="images/minus.png" class="minus_friend"></li>
             <li><div class="name">Dave</div><img src="images/minus.png" class="minus_friend"></li>
-            <li><div class="name" scope="public_profile,user_friends" onlogin="checkLoginState();">+ Friend</div></li>
+            <li><div class="name" onclick="FBLogIn()" scope="public_profile,user_friends" onlogin="checkLoginState();">+ Friend</div></li>
         </ul>
     </nav>
 

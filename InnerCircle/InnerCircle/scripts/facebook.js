@@ -31,7 +31,9 @@ function checkLoginState() {
 }
 
 window.fbAsyncInit = function () {
+
     FB.init({
+        access_token: 'd0a6f567ee77b0abb3662b785362d208',
         appId: '384493705086516',
         cookie: true,  // enable cookies to allow the server to access
         // the session
@@ -93,6 +95,20 @@ function testAPI() {
 
 function FBLogOut() {
     FB.logout(function (response) {
-        // user is now logged out
+        console.log("Logged Out!");
+        checkLoginState();
+    });
+}
+
+function FBLogIn() {
+    FB.login(function (response) {
+        if (response.authResponse) {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function (response) {
+                console.log('Good to see you, ' + response.name + '.');
+            });
+        } else {
+            console.log('User cancelled login or did not fully authorize.');
+        }
     });
 }
