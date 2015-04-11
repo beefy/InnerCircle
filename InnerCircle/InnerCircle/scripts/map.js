@@ -20,8 +20,14 @@ function showPosition(position) {
         navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }
     }
 
+    //bob's position
+    boblat = lat + 0.01;
+    boblon = lon + 0.01;
+    boblatlon = new google.maps.LatLng(boblat, boblon)
+
     var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
-    var marker = new google.maps.Marker({ position: latlon, map: map, title: "You are here!" });
+    var user = new google.maps.Marker({ position: latlon, map: map, title: "You are here" });
+    var bob = new google.maps.Marker({ position: boblatlon, map: map, title: "Bob is here!" });
 }
 
 function showError(error) {

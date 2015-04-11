@@ -78,9 +78,9 @@ function testAPI() {
         //  'Thanks for logging in, ' + response.name + '!';
     });
 
-    //fetching data for friend
+    //fetching data for friends
     FB.api('/me/friends', function (response) {
-        friendCount = response.summary.total_count;
+        friendCount = response.data.length;
         friendData = response.data;
         for (i = 0; i < friendCount; i++) {
             console.log(friendData[i].name);
@@ -106,6 +106,7 @@ function FBLogIn() {
             console.log('Welcome!  Fetching your information.... ');
             FB.api('/me', function (response) {
                 window.alert('Good to see you, ' + response.name + '.');
+                testAPI();
             });
         } else {
             console.log('User cancelled login or did not fully authorize.');
