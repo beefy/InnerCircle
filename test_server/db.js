@@ -9,7 +9,7 @@ var projectSchema = new Schema({
     id: ObjectId,
     userLat: { type: String, required: true },
     userLong: { type: String, required: true },
-    date: {type: Date, default: Date.now}
+    date: { type: Date, default: Date.now }
 })
 
 var project = db.model('project', projectSchema, 'project');

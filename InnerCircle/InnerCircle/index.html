@@ -13,7 +13,7 @@
 
 
 </head>
-<body>
+<body onload="getLocation()">
     <!-- Cordova reference-->
     <script src="cordova.js"></script>
     <script src="scripts/platformOverrides.js"></script>
@@ -50,7 +50,6 @@
 
 
     <div id= "map">
-        <p id="demo">Click the button to get your position.</p>
 
         <button onclick="getLocation()">Try It</button>
 
