@@ -58,14 +58,6 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.use('/', routes);
-app.use('/users', users);
-app.use(function(req,res,next){
-    req.db = db;
-    next();
-});
-
-
 http.createServer(app).listen(3000, function () {
     console.log("Server running");
 });
