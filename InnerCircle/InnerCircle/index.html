@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>InnerCircle</title>
+
+    <!-- ResearchMe references -->
+    <link href="css/index.css" rel="stylesheet" />
+
+    <!--JQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</head>
+<body>
+    <!-- Cordova reference-->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <!--hamburger menu display code-->
+    <script src="scripts/hamburger.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="css/hamburger.css" />
+
+    <script src="scripts/index.js"></script>
+
+    <!--HEADER-->
+    <header>
+        <img id="hamburger" class="menu" src="images/menu.png" onclick="openMenu()" />
+        <img class="logo" src="images/logo.png" />
+    </header>
+
+    <!--MENU-->
+    <nav>
+        <ul>
+            <li><div onclick="window.location.replace('profile.html')">Profile</div></li>
+            <li><div onclick="window.location.replace('options.html')">Options</div></li>
+            <li><div onclick="window.location.replace('add_study.html')">Add Study</div></li>
+        </ul>
+    </nav>
+
+    <!--The Layer that will be layed over the content
+    so that the content is unclickable while menu is shown-->
+    <div id="contentLayer" onclick="removeMenu()"></div>
+
+    <!--CONTENT-->
+    <div id="content" class="feed">
+ 
+    </div>
+
+
+</body>
+</html>
