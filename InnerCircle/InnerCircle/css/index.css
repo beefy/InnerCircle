@@ -12,14 +12,12 @@ header {
 
 .logo {
     width: 55%;
-    margin-left:2.5%;
 }
 
 .menu {
     width: 15%;
-    margin-right:2.5%;
-    margin-left:2.5%;
-    margin-top:-25%;
+    margin-left:7.5%;
+    margin-top:-75%;
     vertical-align:middle;
 }
 
