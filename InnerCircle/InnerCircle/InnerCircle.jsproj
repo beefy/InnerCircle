@@ -115,6 +115,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\menu.png" />
     <Content Include="images\minus.png" />
+    <Content Include="login.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Folder Include="merges\ios\" />
