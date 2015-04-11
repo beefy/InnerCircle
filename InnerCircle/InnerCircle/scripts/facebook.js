@@ -95,7 +95,7 @@ function testAPI() {
 
 function FBLogOut() {
     FB.logout(function (response) {
-        console.log("Logged Out!");
+        window.alert("Logged Out!");
         checkLoginState();
     });
 }
@@ -105,7 +105,7 @@ function FBLogIn() {
         if (response.authResponse) {
             console.log('Welcome!  Fetching your information.... ');
             FB.api('/me', function (response) {
-                console.log('Good to see you, ' + response.name + '.');
+                window.alert('Good to see you, ' + response.name + '.');
             });
         } else {
             console.log('User cancelled login or did not fully authorize.');
