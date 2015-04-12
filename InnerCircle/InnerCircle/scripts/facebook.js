@@ -76,6 +76,13 @@ function testAPI() {
         console.log('Successful login for: ' + response.name);
         //document.getElementById('status').innerHTML =
         //  'Thanks for logging in, ' + response.name + '!';
+
+        //get profile picture
+        FB.api("/me/picture?width=180&height=180", function (response) {
+
+            console.log(response.data.url);
+
+        });
     });
 
     //fetching data for friends
