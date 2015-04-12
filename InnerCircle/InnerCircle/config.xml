@@ -11,5 +11,6 @@
   <preference name="Fullscreen" value="true" />
   <preference name="Orientation" value="portrait" />
   <uses-permission name="android.permission.INTERNET" />
+  <icon src="icon.png" />
   <vs:platformSpecificValues />
 </widget>
