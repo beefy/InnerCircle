@@ -10,5 +10,6 @@
   <preference name="windows-phone-target-version" value="8.1" />
   <preference name="Fullscreen" value="true" />
   <preference name="Orientation" value="portrait" />
+  <icon src="icon.png"/>
   <vs:platformSpecificValues />
 </widget>
