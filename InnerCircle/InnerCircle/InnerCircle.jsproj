@@ -122,6 +122,7 @@
     <Content Include="images\profpic2.png" />
     <Content Include="images\profpic3.png" />
     <Content Include="login.html" />
+    <Content Include="icon.png" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Content Include="dbsend.php" />
