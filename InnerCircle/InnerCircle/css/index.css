@@ -97,6 +97,10 @@ header {
     vertical-align:middle;
 }
 
+#addfriend {
+      margin-left: 10%;
+}
+
 .popup button {
     margin-top:5%;
   border-width: thick;
