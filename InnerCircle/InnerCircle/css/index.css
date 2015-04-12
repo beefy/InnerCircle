@@ -11,6 +11,7 @@ header {
 
 .logo {
     width: 55%;
+    z-index:-10;
 }
 
 .menu {
