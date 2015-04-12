@@ -23,12 +23,12 @@ exports.getPeople = function (req, res) {
 
 exports.postPerson = function (req, res) {
     var person = new people({
-        name: req.name,
-        lat: req.lat,
-        long: req.lat
+        name: req.body.name,
+        lat: req.body.lat,
+        long: req.body.lat
     });
 
     person.save(function () {
-        res.send("Saved " + req.name)
+        res.send("Saved " + req.body.name)
     });
 };
