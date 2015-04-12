@@ -72,7 +72,7 @@ var geoJson = [{
       }
   }];
 
-var myLayer = L.mapbox.featureLayer().bindPopup('<div class="popup"><p>Hey, Bob</p><button>On my way</button><br/><button>Get over here!</button></div>').addTo(map);
+var myLayer = L.mapbox.featureLayer().bindPopup('<div class="popup"><p>Hey, Bob</p><button class = "way pure-button">On my way</button><br/><button class = "here pure-button">Get over here!</button></div>').addTo(map);
 
 myLayer.setGeoJSON(geoJson);
 
