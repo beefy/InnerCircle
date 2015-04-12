@@ -2,7 +2,6 @@
 var userlat = 60;
 var geolocate;
 
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -99,7 +98,7 @@ function loadMap() {
               coordinates: [userlong, userlat]
           },
           properties: {
-              title: 'user',
+              title: 'Me',
               icon: {
                   "iconUrl": "../images/profpic2.png",
                   "iconSize": [75, 75],
@@ -107,11 +106,10 @@ function loadMap() {
                   "popupAnchor": [22.5, -25],
                   "className": "dot"
               }
-          }
+          },
       }];
 
-    var myLayer = L.mapbox.featureLayer().bindPopup('<div class="popup"><p>Hey, Bob</p><button class = "way pure-button">On my way</button><br/><button class = "here pure-button">Get over here!</button></div>').addTo(map);
-
+    var myLayer = L.mapbox.featureLayer().bindPopup(' ').addTo(map);
 
     function resetColors() {
         for (var i = 0; i < geoJson.length; i++) {
@@ -125,6 +123,17 @@ function loadMap() {
         var marker = e.layer,
             feature = marker.feature;
         marker.setIcon(L.icon(feature.properties.icon));
+
+        //marker.bindPopup('<div class="popup"><p>Hey, Bob</p><button class = "way pure-button">On my way</button><br/><button class = "here pure-button">Get over here!</button></div>')
+        var popupContent = '<div class="popup"><p>Hey, ' + feature.properties.title + '</p><button class = "way pure-button">I\'m On My Way</button><br/><button class = "here pure-button">Get Over Here!</button></div>';
+        if (feature.properties.title == 'Me') var popupContent = '<div class="popup"><p>Me</p></div>';
+        // http://leafletjs.com/reference.html#popup
+        marker.bindPopup(popupContent, {
+            closeButton: false,
+            //minWidth: 320
+        });
+
+
     });
 
     myLayer.on('click', function (e) {
