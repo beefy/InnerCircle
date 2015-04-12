@@ -6,6 +6,25 @@ var geoJson = [{
     type: 'Feature',
     geometry: {
         type: 'Point',
+        coordinates: [0, 0]
+    },
+    properties: {
+        title: 'NaN',
+        icon: {
+            "iconUrl": "../images/back.png",
+            "iconSize": [0, 0],
+            "iconAnchor": [10, 10],
+            "popupAnchor": [0, -55],
+            "className": "dot"
+        },
+        visibility: 'hidden',
+        display: 'none'
+    }
+},
+{
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
         coordinates: [-77, 37.9]
     },
     properties: {
