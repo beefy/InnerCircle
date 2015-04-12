@@ -10,9 +10,13 @@ var geoJson = [{
     },
     properties: {
         title: 'Sandy',
-        'marker-size': 'large',
-        'marker-color': '#E87E38',
-        'marker-symbol': 'circle-stroked'
+        icon: {
+            "iconUrl": "../images/back.png",
+            "iconSize": [25, 25],
+            "iconAnchor": [10, 10],
+            "popupAnchor": [0, -55],
+            "className": "dot"
+        }
     }
 },
   {
@@ -21,12 +25,17 @@ var geoJson = [{
           type: 'Point',
           coordinates: [-78, 36.5]
       },
-      properties: {
+      "properties": {
           title: 'Bob',
-          'marker-size': 'large',
-          'marker-color': '#E87E38',
-          'marker-symbol': 'circle-stroked'
+          icon: {
+              "iconUrl": "../images/back.png",
+              "iconSize": [25, 25],
+              "iconAnchor": [10, 10],
+              "popupAnchor": [0, -55],
+              "className": "dot"
+          }
       }
+
   },
   {
       type: 'Feature',
@@ -36,9 +45,13 @@ var geoJson = [{
       },
       properties: {
           title: 'Albert',
-          'marker-size': 'large',
-          'marker-color': '#E87E38',
-          'marker-symbol': 'circle-stroked'
+          icon: {
+              "iconUrl": "../images/back.png",
+              "iconSize": [25, 25],
+              "iconAnchor": [10, 10],
+              "popupAnchor": [0, -55],
+              "className": "dot"
+          }
       }
   },
   {
@@ -49,13 +62,17 @@ var geoJson = [{
       },
       properties: {
           title: 'user',
-          'marker-size': 'large',
-          'marker-color': '#556EFA',
-          'marker-symbol': 'circle-stroked'
+          icon: {
+              "iconUrl": "../images/back.png",
+              "iconSize": [25, 25],
+              "iconAnchor": [10, 10],
+              "popupAnchor": [0, -55],
+              "className": "dot"
+          }
       }
   }];
 
-var myLayer = L.mapbox.featureLayer().bindPopup('<button class = "fb" >On My Way</button><button class = "sb" >Get Over Here</button>').addTo(map);
+var myLayer = L.mapbox.featureLayer().addTo(map);
 
 myLayer.setGeoJSON(geoJson);
 
@@ -67,11 +84,20 @@ function resetColors() {
     myLayer.setGeoJSON(geoJson);
 }
 
+myLayer.on('layeradd', function (e) {
+    var marker = e.layer,
+        feature = marker.feature;
+    marker.setIcon(L.icon(feature.properties.icon));
+});
+
 myLayer.on('click', function (e) {
     resetColors();
     e.layer.feature.properties['old-symbol'] = e.layer.feature.properties['marker-symbol'];
     e.layer.feature.properties['marker-symbol'] = 'circle';
     myLayer.setGeoJSON(geoJson);
+    map.panTo(e.layer.getLatLng());
 });
 
+
 map.on('click', resetColors);
+myLayer.setGeoJSON(geoJson);
