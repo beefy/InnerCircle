@@ -72,7 +72,7 @@ var geoJson = [{
       }
   }];
 
-var myLayer = L.mapbox.featureLayer().addTo(map);
+var myLayer = L.mapbox.featureLayer().bindPopup('<div class="popup"><p>Hey, Bob</p><button>On my way</button><br/><button>Get over here!</button></div>').addTo(map);
 
 myLayer.setGeoJSON(geoJson);
 
@@ -95,7 +95,6 @@ myLayer.on('click', function (e) {
     e.layer.feature.properties['old-symbol'] = e.layer.feature.properties['marker-symbol'];
     e.layer.feature.properties['marker-symbol'] = 'circle';
     myLayer.setGeoJSON(geoJson);
-    map.panTo(e.layer.getLatLng());
 });
 
 

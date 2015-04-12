@@ -136,3 +136,12 @@ header {
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+.popup {
+    text-align:center;
+    vertical-align:middle;
+}
+
+.popup button {
+    margin-top:5%;
+}
