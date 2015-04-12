@@ -47,12 +47,12 @@ function loadMap() {
             coordinates: [-77, 37.9]
         },
         properties: {
-            title: 'Sandy',
+            title: 'Bob',
             icon: {
-                "iconUrl": "../images/logo.png",
-                "iconSize": [25, 25],
+                "iconUrl": "../images/profpic0.png",
+                "iconSize": [50, 50],
                 "iconAnchor": [10, 10],
-                "popupAnchor": [0, -55],
+                "popupAnchor": [15, -25],
                 "className": "dot"
             }
         }
@@ -64,12 +64,12 @@ function loadMap() {
               coordinates: [-78, 36.5]
           },
           "properties": {
-              title: 'Bob',
+              title: 'Mitchel',
               icon: {
-                  "iconUrl": "../images/logo.png",
-                  "iconSize": [25, 25],
+                  "iconUrl": "../images/profpic1.png",
+                  "iconSize": [50, 50],
                   "iconAnchor": [10, 10],
-                  "popupAnchor": [0, -55],
+                  "popupAnchor": [15, -25],
                   "className": "dot"
               }
           }
@@ -82,12 +82,12 @@ function loadMap() {
               coordinates: [-80, 36.5]
           },
           properties: {
-              title: 'Albert',
+              title: 'Alex',
               icon: {
-                  "iconUrl": "../images/logo.png",
-                  "iconSize": [25, 25],
+                  "iconUrl": "../images/profpic3.png",
+                  "iconSize": [50, 50],
                   "iconAnchor": [10, 10],
-                  "popupAnchor": [0, -55],
+                  "popupAnchor": [15, -25],
                   "className": "dot"
               }
           }
@@ -101,10 +101,10 @@ function loadMap() {
           properties: {
               title: 'user',
               icon: {
-                  "iconUrl": "../images/logo.png",
-                  "iconSize": [50, 50],
+                  "iconUrl": "../images/profpic2.png",
+                  "iconSize": [75, 75],
                   "iconAnchor": [10, 10],
-                  "popupAnchor": [0, -55],
+                  "popupAnchor": [22.5, -25],
                   "className": "dot"
               }
           }
